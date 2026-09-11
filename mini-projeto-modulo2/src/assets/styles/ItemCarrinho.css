@@ -1,0 +1,26 @@
+.item-carrinho {
+    display: flex;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+.item-carrinho:hover {
+    background-color: #fafafa;
+}
+
+.coluna-produto {
+    flex: 2;
+    text-align: left;
+}
+
+.coluna-preco,
+.coluna-quantidade,
+.coluna-subtotal {
+    flex: 1;
+    text-align: right;
+}

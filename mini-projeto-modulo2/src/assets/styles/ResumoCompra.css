@@ -1,0 +1,35 @@
+.resumo-compra {
+    margin-top: 1.5rem;
+}
+
+.resumo-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 2px solid #222;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.resumo-total-valor {
+    color: #1a7f37;
+}
+
+.botao-finalizar {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.9rem;
+    background-color: #1a7f37;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.botao-finalizar:hover {
+    background-color: #156a2e;
+}
