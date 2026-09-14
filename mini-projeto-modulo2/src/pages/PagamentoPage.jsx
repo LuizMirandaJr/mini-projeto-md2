@@ -6,6 +6,7 @@ import { usePagamento } from "../hooks/usePagamento"
 import "../assets/styles/pagamento.css"
 import { produtos } from "../data/produtos"
 import ResumoCompra from "../components/ResumoCompra"
+import { formatarNumeroCartao, formatarValidade } from "../utils/valildarCartao"
 
 
 function Pagamento() {
@@ -73,7 +74,12 @@ function Pagamento() {
                                 inputMode="numeric" // Sugere o teclado numerico em dispositivos móveis
                                 autoComplete="cc-number"
                                 placeholder="0000 0000 0000 0000"
-                                {...register("numeroCartao")}
+                                maxLength={19}
+                                {...register("numeroCartao", {
+                                    onChange: (e) => {
+                                        e.target.value = formatarNumeroCartao(e.target.value)
+                                    }
+                                })}
                                 aria-invalid={errors.numeroCartao ? "true" : "false"}
                                 aria-describedby={errors.numeroCartao ? "erro-numeroCartao" : undefined}
                             />
@@ -93,7 +99,12 @@ function Pagamento() {
                                 inputMode="numeric"
                                 autoComplete="cc-exp"
                                 placeholder="MM/AA"
-                                {...register("validade")}
+                                maxLength={5}
+                                {...register("validade", {
+                                    onChange: (e) => {
+                                        e.target.value = formatarValidade(e.target.value)
+                                    }
+                                })}
                                 aria-invalid={errors.validade ? "true" : "false"}
                                 aria-describedby={errors.validade ? "erro-validade" : undefined}
                             />

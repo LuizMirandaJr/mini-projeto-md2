@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { limparNumeroCartao, possuiDigitosRepetidos } from "../utils/valildarCartao"
 
-
 export function usePagamento() {
     const [processando, setProcessando] = useState(false)
 
