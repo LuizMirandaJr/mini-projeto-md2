@@ -95,3 +95,35 @@ aside.resumo-compra h2 {
 .botao-principal:active {
     transform: translateY(0);
 }
+
+/* Breakpoint Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    aside.resumo-compra {
+        padding: 1rem;
+    }
+}
+
+/* Breakpoint Smartphone (max-width: 640px) */
+@media (max-width: 640px) {
+    aside.resumo-compra {
+        padding: 0.85rem;
+    }
+
+    .resumo-item {
+        font-size: 0.85rem;
+    }
+
+    .resumo-total {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .resumo-total-valor {
+        font-size: 1.25rem;
+    }
+
+    .botao-principal {
+        padding: 0.85rem;
+        font-size: 0.95rem;
+    }
+}

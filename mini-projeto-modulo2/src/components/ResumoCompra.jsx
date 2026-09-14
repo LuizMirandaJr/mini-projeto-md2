@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { formatarMoeda } from "../utils/formatarMoeda.js";
-import { produtos } from "../data/produtos.js"
 import "../assets/styles/ResumoCompra.css"
 
 // ALTERAÇÃO: Adicionada a prop exibirBotaoFinalizar (padrão true) para controlar a exibição do botão

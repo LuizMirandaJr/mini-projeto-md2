@@ -40,3 +40,55 @@
     font-weight: 600;
     color: var(--text-main);
 }
+
+/* Breakpoint Smartphone (max-width: 640px) */
+@media (max-width: 640px) {
+    .item-carrinho {
+        flex-wrap: wrap;
+        padding: 0.9rem 1rem;
+        gap: 0.5rem;
+    }
+
+    .coluna-produto {
+        flex: 1 1 100%;
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+    }
+
+    .coluna-preco,
+    .coluna-quantidade,
+    .coluna-subtotal {
+        flex: 1;
+        font-size: 0.875rem;
+        text-align: left;
+    }
+
+    .coluna-preco::before {
+        content: "Preço: ";
+        font-size: 0.75rem;
+        color: var(--text-sub);
+        display: block;
+    }
+
+    .coluna-quantidade {
+        text-align: center;
+    }
+
+    .coluna-quantidade::before {
+        content: "Qtd: ";
+        font-size: 0.75rem;
+        color: var(--text-sub);
+        display: block;
+    }
+
+    .coluna-subtotal {
+        text-align: right;
+    }
+
+    .coluna-subtotal::before {
+        content: "Subtotal: ";
+        font-size: 0.75rem;
+        color: var(--text-sub);
+        display: block;
+    }
+}
