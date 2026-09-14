@@ -22,3 +22,14 @@ export function formatarNumeroCartao(valor) {
     // Retira os espaços entre os números "1234 5678 9012 3456"
     return blocos.join(" ")
 }
+
+export function formatarValidade(valor) {
+
+    const numeros = valor.replace(/\D/g, "").slice(0, 4)
+
+    if (numeros.length <= 2) {
+        return numeros
+    }
+
+    return `${numeros.slice(0, 2)}/${numeros.slice(2)}` // Após o usuario digitar o 2º numero, o "terceiro digito" será automaticamente a barra
+}
