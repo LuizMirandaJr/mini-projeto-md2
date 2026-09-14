@@ -2,9 +2,17 @@ import { useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { pagamentoSchema } from "../schemas/pagamentoSchema"
+import { usePagamento } from "../hooks/usePagamento"
 import "../assets/styles/pagamento.css"
 
+
 function Pagamento() {
+
+    /* const navigate = useNavigate() */
+
+    const { processarPagamento, processando } = usePagamento()
+
+
     const {
         register,
         handleSubmit,
@@ -14,9 +22,11 @@ function Pagamento() {
         mode: "onBlur"
     })
 
-    function onSubmit(dados) {
-        console.log("Formulário validado com sucesso:", dados)
-        alert("Formulário válido! (Nenhum processamento foi feito ainda)")
+    async function onSubmit(dados) {
+        /* console.log("Formulário validado com sucesso:", dados)
+        alert("Formulário válido! (Nenhum processamento foi feito ainda)") */
+
+        await processarPagamento(dados)
     }
 
     return (
@@ -113,6 +123,15 @@ function Pagamento() {
                 </button>
 
             </form>
+
+            {processando && (
+                <div className="modal-overlay" role="dialog" aria-modal="true">
+                    <div className="modal-conteudo">
+                        <div className="spinner"></div>
+                        <p className="modal-mensagem">A COMPRA ESTÁ SENDO PROCESSADA</p>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }
