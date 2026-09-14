@@ -1,11 +1,16 @@
 .carrinho-container {
     width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
     padding: 2rem;
     box-shadow: var(--shadow-xl);
     animation: fadeIn 0.25s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .carrinho-titulo {
