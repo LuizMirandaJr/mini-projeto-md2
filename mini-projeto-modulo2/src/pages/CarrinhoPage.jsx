@@ -31,7 +31,8 @@ function Carrinho() {
                 ))}
             </div>
 
-            <ResumoCompra total={total} />
+            {/* ALTERAÇÃO: Passando a prop produtos={produtosCarrinho} para o ResumoCompra */}
+            <ResumoCompra produtos={produtosCarrinho} total={total} />
         </div>
     );
 }

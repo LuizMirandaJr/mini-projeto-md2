@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-page: #f8fafc;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-sub: #94a3b8;
+    --primary: #0f172a;
+    --primary-hover: #1e293b;
+    --primary-foreground: #ffffff;
+    --success: #16a34a;
+    --success-bg: #f0fdf4;
+    --success-border: #bbf7d0;
+    --danger: #ef4444;
+    --danger-bg: #fef2f2;
+    --danger-border: #fecaca;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.08);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --transition: all 0.2s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+/* Páginas de Resultado (Sucesso e Falha) */
+.resultado-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 3.5rem 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.resultado-container h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+}
+
+.resultado-container.sucesso {
+    border-color: var(--success-border);
+}
+
+.resultado-container.sucesso h1 {
+    color: var(--success);
+}
+
+.resultado-container.falha {
+    border-color: var(--danger-border);
+}
+
+.resultado-container.falha h1 {
+    color: var(--danger);
+    text-transform: capitalize;
+}
+
+.resultado-icone {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.resultado-container.sucesso .resultado-icone {
+    background-color: var(--success-bg);
+    color: var(--success);
+    border: 2px solid var(--success-border);
+}
+
+.resultado-container.falha .resultado-icone {
+    background-color: var(--danger-bg);
+    color: var(--danger);
+    border: 2px solid var(--danger-border);
+}
+
+.resultado-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+.resultado-link:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

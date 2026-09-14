@@ -1,8 +1,10 @@
 .item-carrinho {
     display: flex;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 1.1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
     align-items: center;
+    transition: var(--transition);
+    font-size: 0.95rem;
 }
 
 .item-carrinho:last-child {
@@ -10,17 +12,31 @@
 }
 
 .item-carrinho:hover {
-    background-color: #fafafa;
+    background-color: #f8fafc;
 }
 
 .coluna-produto {
     flex: 2;
     text-align: left;
+    font-weight: 500;
+    color: var(--text-main);
 }
 
-.coluna-preco,
-.coluna-quantidade,
+.coluna-preco {
+    flex: 1;
+    text-align: right;
+    color: var(--text-muted);
+}
+
+.coluna-quantidade {
+    flex: 1;
+    text-align: right;
+    color: var(--text-muted);
+}
+
 .coluna-subtotal {
     flex: 1;
     text-align: right;
+    font-weight: 600;
+    color: var(--text-main);
 }

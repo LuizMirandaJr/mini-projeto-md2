@@ -1,35 +1,49 @@
 .resumo-compra {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
 }
 
 .resumo-total {
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 2px solid #222;
-    font-size: 1.2rem;
-    font-weight: bold;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 1.25rem;
 }
 
 .resumo-total-valor {
-    color: #1a7f37;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.02em;
 }
 
 .botao-finalizar {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    margin-top: 1.5rem;
-    padding: 0.9rem;
-    background-color: #1a7f37;
-    color: #fff;
+    padding: 0.95rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
     border: none;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
 }
 
 .botao-finalizar:hover {
-    background-color: #156a2e;
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.botao-finalizar:active {
+    transform: translateY(0);
 }
