@@ -21,7 +21,7 @@
     letter-spacing: -0.02em;
 }
 
-.botao-finalizar {
+.botao-principal {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,12 +38,60 @@
     transition: var(--transition);
 }
 
-.botao-finalizar:hover {
+/* ALTERAÇÃO: Estilização do wrapper para suportar tanto o layout individual quanto o grid lado a lado */
+.resumo-compra-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+aside.resumo-compra {
+    background-color: #fafbfc;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-top: 0;
+}
+
+aside.resumo-compra h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.resumo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    color: var(--text-muted);
+}
+
+.resumo-item span:first-child {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.resumo-subtotal-destaque {
+    display: block;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border);
+    text-align: right;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.botao-principal:hover {
     background-color: var(--primary-hover);
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
 }
 
-.botao-finalizar:active {
+.botao-principal:active {
     transform: translateY(0);
 }
