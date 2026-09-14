@@ -11,3 +11,14 @@ export function possuiDigitosRepetidos(numeroLimpo) {
     const primeiroDigito = numeroLimpo[0]
     return numeroLimpo.split("").every((digito) => digito === primeiroDigito)
 }
+
+export function formatarNumeroCartao(valor) {
+    // Remove tudo que não for número e limita a 16 dígitos
+    const numeros = valor.replace(/\D/g, "").slice(0, 16)
+
+    // Faz a máscara para ficar de 4 em 4 digitos => 1234 1234 1234 1234
+    const blocos = numeros.match(/.{1,4}/g) || []
+
+    // Retira os espaços entre os números "1234 5678 9012 3456"
+    return blocos.join(" ")
+}
