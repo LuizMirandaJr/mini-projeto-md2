@@ -120,10 +120,11 @@ function Pagamento() {
                             <label htmlFor="cvv">CVV</label>
                             <input
                                 id="cvv"
-                                type="text"
+                                type="password"
                                 inputMode="numeric"
                                 autoComplete="cc-csc"
                                 placeholder="123"
+                                maxLength={3}
                                 {...register("cvv")}
                                 aria-invalid={errors.cvv ? "true" : "false"}
                                 aria-describedby={errors.cvv ? "erro-cvv" : undefined}
