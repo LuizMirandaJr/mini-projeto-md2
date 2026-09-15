@@ -153,7 +153,7 @@ function Pagamento() {
                 )}
             </section>
 
-            {/* ALTERAÇÃO: Ocultando o botão "Finalizar Compra" na tela de pagamento */}
+
             <ResumoCompra
                 produtos={produtos}
                 total={total}
