@@ -561,7 +561,7 @@ A partir desse ponto é possível acompanhar:
 
 ### Print do Debugger
 
-[INSIRA AQUI UM PRINT DO DEBUGGER]
+<img width="881" height="390" alt="image" src="https://github.com/user-attachments/assets/1e084ed7-bcf2-47b6-876e-de20a55d9057" />
 
 ---
 
@@ -599,16 +599,19 @@ https://github.com/LuizMirandaJr/mini-projeto-md2
 
 Durante o desenvolvimento do projeto foram utilizadas ferramentas de Inteligência Artificial como apoio ao processo de aprendizagem e desenvolvimento.
 
-A IA foi utilizada principalmente para:
+As IA's foram utilizada principalmente para:
 
+### Chat GPT
+* Sugestões de implementação;
+* Organização e documentação do projeto.
+
+### Claude
 * Esclarecimento de dúvidas;
 * Auxílio na compreensão de conceitos;
 * Identificação de possíveis problemas;
-* Sugestões de implementação;
 * Revisão de código;
-* Organização e documentação do projeto.
 
-Todo o código utilizado no projeto foi analisado e validado durante o desenvolvimento, buscando compreender o funcionamento das soluções utilizadas.
+Todo o código utilizado no projeto foi analisado , testado e validado durante o desenvolvimento, buscando compreender o funcionamento das soluções utilizadas.
 
 ---
 
@@ -620,13 +623,6 @@ Apesar de atender à proposta do projeto, algumas funcionalidades poderiam ser a
 * Adição e remoção de produtos do carrinho;
 * Alteração de quantidade;
 * Persistência do carrinho;
-* Backend;
-* Banco de dados;
-* Sistema de login;
-* Histórico de compras;
-* Integração com uma API de pagamentos;
-* Integração com um gateway de pagamento real;
-* Validação real de cartão;
 * Página de confirmação com dados do pedido.
 
 ---
