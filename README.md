@@ -581,8 +581,7 @@ Vídeo demonstrando o funcionamento do projeto e os principais pontos desenvolvi
 
 🔗 **Vídeo:**
 
-
-Link do video será incluido aqui!
+https://drive.google.com/file/d/112Wdm95FhcN7K0MHWCeS2y7dxQ1FsV7r/view?usp=drive_link
 
 ---
 
